@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Truy Xuất Nguồn Gốc - CSDL Chăn Nuôi (B2B Partner)</title>
+    <title>Truy Xuất Nguồn Gốc - CSDL Chăn Nuôi (Partner B2B)</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Thư viện FontAwesome ổn định hoàn toàn -->
@@ -50,10 +50,10 @@
     <!-- Container tối ưu hóa cho Mobile -->
     <div class="max-w-md mx-auto bg-white min-h-screen shadow-lg pb-1 relative">
         
-        <!-- Nhãn nhận diện phân hệ đối tác -->
+        <!-- Nhãn nhận diện phân hệ đối tác B2B -->
         <div class="bg-slate-900 text-white text-[10px] font-bold py-1 px-4 tracking-widest flex justify-between items-center">
-            <span>HỆ THỐNG TRA CỨU CSDL QUỐC GIA</span>
-            <span class="bg-bafGreen-600 text-white px-2 py-0.5 rounded-full text-[9px] animate-pulse">PHÂN HỆ ĐỐI TÁC (B2B)</span>
+            <span>HỆ THỐNG TRA CỨU CSDL TXNG</span>
+            <span class="bg-amber-600 text-white px-2 py-0.5 rounded-full text-[9px] animate-pulse">PHÂN HỆ ĐỐI TÁC (PARTNER / B2B)</span>
         </div>
 
         <!-- Khu vực hiển thị sản phẩm -->
@@ -84,7 +84,7 @@
             <!-- Lô sản xuất -->
             <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
                 <p class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">Lô sản xuất</p>
-                <p class="text-[15px] font-bold text-slate-800">DN26032101</p>
+                <p class="text-[15px] font-bold text-slate-800">DN26042501</p>
             </div>
             <!-- Số VSTY -->
             <div class="bg-white border border-slate-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all">
@@ -132,16 +132,16 @@
             </div>
         </div>
 
-        <!-- Khối Nhật ký chuỗi cung ứng chuyên sâu B2B - 6 BƯỚC (Mặc định MỞ RỘNG) -->
+        <!-- Khối Nhật ký chuỗi cung ứng B2B / ĐỐI TÁC - 6 BƯỚC (Mặc định MỞ RỘNG) -->
         <div class="px-4 mb-5">
             <div class="bg-white border border-slate-100 rounded-2xl shadow-sm p-4">
                 <div class="flex items-center space-x-3 mb-6">
                     <div class="w-10 h-10 rounded-xl bg-amber-500 flex items-center justify-center text-white">
-                        <i class="fa-solid fa-file-lines text-base"></i>
+                        <i class="fa-solid fa-handshake text-base"></i>
                     </div>
                     <div>
                         <h3 class="text-[15px] font-bold text-slate-900 leading-tight">Nhật ký chuỗi cung ứng</h3>
-                        <p class="text-[11px] text-gray-400 mt-0.5">Truy xuất B2B chi tiết từ nông trại -> thương mại</p>
+                        <p class="text-[11px] text-gray-400 mt-0.5">Truy xuất đối tác chi tiết tích hợp SAP ERP & VNPT</p>
                     </div>
                 </div>
 
@@ -150,266 +150,300 @@
                     <!-- Trục dọc Timeline nét mảnh tinh tế -->
                     <div class="absolute left-[7px] top-2 bottom-2 w-[1.5px] bg-slate-100"></div>
 
-                    <!-- Bước 1: HOÀN THIỆN ĐÓNG GÓI & GIAO HÀNG B2B (Đã bỏ chữ "Bước 1:") -->
+                    <!-- Bước 1: XUẤT KHO THÀNH PHẨM & GIAO HÀNG (Mới nhất) -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-rose-500 ring-4 ring-rose-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-rose-600 uppercase tracking-wide">Đóng gói & Giao hàng B2B</span>
-                            <button id="step-1-btn" onclick="toggleTimeline('step-1-card', 'step-1-btn', 'step-1-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-1-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-rose-600 uppercase tracking-wide">Xuất kho thành phẩm & Giao hàng</span>
+                            <button id="step-1-btn" onclick="toggleTimeline('step-1-card', 'step-1-btn', 'step-1-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-1-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 1 -->
-                        <div id="step-1-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-rose-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-dolly text-sm"></i>
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>25/04/2026 09:00 AM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Mã đơn xuất hàng đóng gói GS1: <span class="font-mono text-xs text-blue-700 font-bold">(00)08933475569784(21)0704260425000008</span> xuất kho bàn giao Logistics.</p>
+                            
+                            <!-- Phần mở rộng mặc định ẩn -->
+                            <div id="step-1-card" class="hidden mt-3 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Phiếu xuất kho SAP:</span>
+                                    <span class="font-mono font-bold text-slate-900">PXK-DN-260425-08</span>
                                 </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Bộ phận Vận hành Cung ứng BaF</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Xuất kho: 25/04/2026 09:00 AM | Đóng gói: 07:30 AM</p>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Tài xế điều phối:</span>
+                                    <span class="font-semibold text-slate-800">Lê Hoàng N.</span>
                                 </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2.5 text-[13px]">
-                                <div class="flex flex-col space-y-1">
-                                    <span class="text-slate-400 text-xs">Mã Thùng / SSCC (GS1)</span>
-                                    <span class="font-mono font-bold text-slate-800">389300123456789012</span>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Biển số xe:</span>
+                                    <span class="font-semibold text-slate-800">60C-999.99</span>
                                 </div>
-                                <div class="grid grid-cols-2 gap-2 border-t border-slate-50 pt-2">
-                                    <div>
-                                        <span class="text-slate-400 text-[11px]">Lô ngày</span>
-                                        <p class="font-semibold text-slate-700 text-xs">DN26032101</p>
-                                    </div>
-                                    <div>
-                                        <span class="text-slate-400 text-[11px]">Hạn sử dụng</span>
-                                        <p class="font-semibold text-red-600 text-xs">27/04/2026</p>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col space-y-1 border-t border-slate-50 pt-2">
-                                    <span class="text-slate-400 text-xs">Nghiệp vụ</span>
-                                    <span class="font-semibold text-slate-700 text-left">Phiếu giao nhận Logistics B2B đã xác nhận số hóa hệ thống.</span>
+                                <div class="bg-blue-50/50 p-2 rounded border border-blue-100 text-[11px] leading-relaxed text-blue-700">
+                                    <i class="fa-solid fa-circle-nodes mr-1"></i><strong>Đồng bộ tồn kho SAP:</strong> Tự động trừ tồn kho nguyên liệu và tăng tồn thành phẩm tức thời.
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bước 2: NHÀ MÁY CHẾ BIẾN - TIẾP NHẬN NGUYÊN LIỆU (Đã bỏ chữ "Bước 2:") -->
+                    <!-- Bước 2: ĐÓNG GÓI THÀNH PHẨM -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-amber-500 ring-4 ring-amber-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wide">Nhà máy tiếp nhận nguyên liệu</span>
-                            <button id="step-2-btn" onclick="toggleTimeline('step-2-card', 'step-2-btn', 'step-2-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-2-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-amber-600 uppercase tracking-wide">Đóng gói thành phẩm</span>
+                            <button id="step-2-btn" onclick="toggleTimeline('step-2-card', 'step-2-btn', 'step-2-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-2-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 2 -->
-                        <div id="step-2-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-amber-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-industry text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Nhà máy Chế biến BaF Đồng Nai</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Tiếp nhận: 25/04/2026 05:00 AM</p>
-                                </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2.5 text-[13px]">
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>25/04/2026 07:30 AM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Hoàn thành đóng gói khay 300g, dán tem kích hoạt QR.</p>
+                            
+                            <!-- Phần mở rộng mặc định ẩn -->
+                            <div id="step-2-card" class="hidden mt-3 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
                                 <div class="flex justify-between">
-                                    <span class="text-slate-400 text-xs">Mã Nguyên Liệu (GS1)</span>
-                                    <span class="font-mono font-bold text-slate-700">MAT-GM12-004</span>
+                                    <span class="text-slate-400">Mã sản phẩm sau đóng gói GS1:</span>
+                                    <span class="font-mono font-bold text-blue-700 text-xs text-right break-all">(01)38933475569784(21)070401260425008472</span>
                                 </div>
-                                <div class="flex flex-col space-y-1 border-t border-slate-50 pt-2">
-                                    <span class="text-slate-400 text-xs">Biên bản kiểm tra</span>
-                                    <span class="font-semibold text-slate-700">Bàn giao thịt xẻ tươi lạnh từ Hương Vĩnh Cửu đạt chuẩn cảm quan & vi sinh.</span>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Mã Lô Ngày (SAP):</span>
+                                    <span class="font-mono font-semibold text-slate-800">DN26042501</span>
                                 </div>
-                                <!-- Nút tương tác xem chi tiết hình ảnh biên bản -->
-                                <div class="pt-1.5 border-t border-slate-50 flex justify-end">
-                                    <button onclick="openPartnerDocModal('bbbg')" class="inline-flex items-center space-x-1 text-xs bg-bafGreen-600 hover:bg-bafGreen-700 text-white px-2.5 py-1.5 rounded-lg font-semibold transition-all shadow-sm">
-                                        <i class="fa-solid fa-file-invoice"></i>
-                                        <span>Xem biên bản bàn giao</span>
-                                    </button>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Mã SKU:</span>
+                                    <span class="font-mono font-semibold text-slate-800">SKU-BAROI-300G</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Nhân viên vận hành:</span>
+                                    <span class="font-semibold text-slate-800">Nguyễn Thị X. (NV-209)</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bước 3: VẬN CHUYỂN LẠNH SANG NHÀ MÁY CHẾ BIẾN (Logistics 2 - Đã bỏ chữ "Bước 3:") -->
+                    <!-- Bước 3: CHẾ BIẾN & PHỐI TRỘN -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-blue-500 ring-4 ring-blue-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wide">Vận chuyển chuỗi lạnh (Logistics 2)</span>
-                            <button id="step-3-btn" onclick="toggleTimeline('step-3-card', 'step-3-btn', 'step-3-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-3-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wide">Chế biến & Phối trộn</span>
+                            <button id="step-3-btn" onclick="toggleTimeline('step-3-card', 'step-3-btn', 'step-3-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-3-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 3 -->
-                        <div id="step-3-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-blue-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-temperature-arrow-down text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Đội xe lạnh chuyên dụng BaF</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Hành trình: 25/04/2026 02:00 AM - 04:30 AM</p>
-                                </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2 text-[13px]">
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>25/04/2026 06:00 AM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Nguyên liệu được đưa vào cối trộn thành phẩm.</p>
+                            
+                            <!-- Phần mở rộng mặc định ẩn -->
+                            <div id="step-3-card" class="hidden mt-3 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
                                 <div class="flex justify-between">
-                                    <span class="text-slate-400 text-xs">Phương tiện</span>
-                                    <span class="font-bold text-slate-700">Xe đông lạnh 60C-123.45</span>
+                                    <span class="text-slate-400">Mã mẻ trộn chế biến GS1:</span>
+                                    <span class="font-mono font-bold text-blue-700 text-xs text-right break-all">(01)38933475569784(21)060401260425000104</span>
                                 </div>
-                                <div class="flex justify-between items-center border-t border-slate-50 pt-1.5">
-                                    <span class="text-slate-400 text-xs">Nhiệt độ thùng lạnh</span>
-                                    <span class="font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded text-xs flex items-center">
-                                        <i class="fa-solid fa-snowflake mr-1"></i>2.5°C (Đạt chuẩn < 4°C)
-                                    </span>
+                                <div class="flex flex-col space-y-1 bg-amber-50/60 p-2 rounded border border-amber-100 text-[11px]">
+                                    <span class="text-amber-800 font-bold"><i class="fa-solid fa-code-branch mr-1"></i>Mã Mẻ Dư (Nối vết gia phả) GS1:</span>
+                                    <p class="text-amber-900 font-mono text-[10px] break-all">(01)38933475569784(21)060401260425990104 <span class="text-slate-500 font-sans text-xs">(Thu hồi 5.2kg thịt dư thừa từ ca trước để đảm bảo tính liên tục thông tin phả hệ).</span></p>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Công thức trộn:</span>
+                                    <span class="font-semibold text-slate-850 text-right text-xs">Thịt ba rọi <span class="font-mono text-blue-700 font-bold break-all">(01)38933475987656(21)040401260425000004</span> (98%) + Phụ gia an toàn (2%)</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Trưởng ca giám sát:</span>
+                                    <span class="font-bold text-slate-800">Lê Văn C.</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bước 4: LÒ MỔ - TIẾP NHẬN & KIỂM DỊCH GIẾT MỔ (Đã bỏ chữ "Bước 4:") -->
+                    <!-- Bước 4: TIẾP NHẬN NGUYÊN LIỆU & VẬN CHUYỂN LẠNH -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-emerald-500 ring-4 ring-emerald-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wide">Kiểm dịch & Giết mổ</span>
-                            <button id="step-4-btn" onclick="toggleTimeline('step-4-card', 'step-4-btn', 'step-4-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-4-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-wide">Tiếp nhận nguyên liệu & Vận chuyển lạnh</span>
+                            <button id="step-4-btn" onclick="toggleTimeline('step-4-card', 'step-4-btn', 'step-4-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-4-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 4 -->
-                        <div id="step-4-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-emerald-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-house-laptop text-sm"></i>
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>25/04/2026 05:00 AM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Tiếp nhận thịt xẻ tảng và kiểm soát đầu vào tại Nhà máy BaF Đồng Nai.</p>
+                            
+                            <!-- Phần mở rộng mặc định ẩn -->
+                            <div id="step-4-card" class="hidden mt-3 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <div class="flex flex-col space-y-1 bg-blue-50/50 p-2 rounded border border-blue-100 text-[11px] text-blue-700">
+                                    <span><i class="fa-solid fa-mobile-screen-button mr-1"></i>PDA quét đối soát:</span>
+                                    <span class="font-mono font-bold text-xs break-all">Khớp mã lô pha lóc GS1: (01)38933475987656(21)040401260425000004</span>
                                 </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Công ty TNHH MTV Hương Vĩnh Cửu</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Thời điểm: 25/04/2026 01:15 AM</p>
-                                </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2.5 text-[13px]">
                                 <div class="flex justify-between">
-                                    <span class="text-slate-400 text-xs">Mã Giết Mổ (GS1)</span>
-                                    <span class="font-mono font-bold text-slate-700">GM-260425-012</span>
+                                    <span class="text-slate-400">Phương tiện giao nhận:</span>
+                                    <span class="font-semibold text-slate-800">Xe lạnh 60C-123.45</span>
                                 </div>
-                                <div class="flex flex-col space-y-1 border-t border-slate-50 pt-2">
-                                    <span class="text-slate-400 text-xs">Chứng nhận pháp lý</span>
-                                    <span class="font-semibold text-slate-700">Giấy CN vệ sinh thú y sau mổ số VSTY-2604-099 và Biên bản đạt yêu cầu giết mổ.</span>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Mã Seal chì xe:</span>
+                                    <span class="font-mono font-bold text-slate-800">SEAL-9921</span>
                                 </div>
-                                <div class="pt-1.5 border-t border-slate-50 flex justify-end">
-                                    <button onclick="openPartnerDocModal('vsty')" class="inline-flex items-center space-x-1 text-xs bg-bafGreen-600 hover:bg-bafGreen-700 text-white px-2.5 py-1.5 rounded-lg font-semibold transition-all shadow-sm">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                        <span>Xem chứng nhận thú y</span>
-                                    </button>
+                                <div class="flex flex-col space-y-1">
+                                    <span class="text-slate-400">Biểu đồ cảm biến nhiệt hành trình:</span>
+                                    <p class="font-semibold text-slate-800"><i class="fa-solid fa-chart-line text-blue-600 mr-1"></i>Duy trì 2.0°C - 3.5°C (Hành trình 2.5 tiếng từ lò mổ về nhà máy)</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bước 5: VẬN CHUYỂN HEO SANG LÒ MỔ (Logistics 1 - Đã bỏ chữ "Bước 5:") -->
+                    <!-- Bước 5: LÒ MỔ (Giết mổ & Pha lóc sơ bộ) -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-sky-500 ring-4 ring-sky-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-wide">Vận chuyển heo (Logistics 1)</span>
-                            <button id="step-5-btn" onclick="toggleTimeline('step-5-card', 'step-5-btn', 'step-5-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-5-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-sky-600 uppercase tracking-wide">Giết mổ & Pha lóc sơ bộ</span>
+                            <button id="step-5-btn" onclick="toggleTimeline('step-5-card', 'step-5-btn', 'step-5-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-5-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 5 -->
-                        <div id="step-5-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-sky-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-truck-moving text-sm"></i>
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>25/04/2026 01:15 AM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Thực hiện giết mổ và pha lóc thành phẩm tại lò mổ Hương Vĩnh Cửu.</p>
+                            
+                            <!-- Phần mở rộng mặc định ẩn -->
+                            <div id="step-5-card" class="hidden mt-3 pt-3 border-t border-slate-200 text-xs text-slate-600 space-y-2">
+                                <div class="bg-emerald-50/50 p-2 rounded border border-emerald-100 text-[11px] text-emerald-800 leading-relaxed">
+                                    <i class="fa-solid fa-heart-circle-check mr-1"></i><strong>Nghỉ ngơi trước mổ:</strong> Lưu tại Chuồng số 3 trong 4 tiếng (từ 19:00 PM 24/04) để hồi phục thể trạng heo, cam kết không stress.
                                 </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Đơn vị vận chuyển BaF Logistics</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Vận chuyển: 24/04/2026 14:30 PM - 18:30 PM</p>
-                                </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2.5 text-[13px]">
                                 <div class="flex justify-between">
-                                    <span class="text-slate-400 text-xs">Số hiệu phương tiện</span>
-                                    <span class="font-bold text-slate-700">Xe chuyên dụng 51C-987.65</span>
+                                    <span class="text-slate-400">Mã cơ sở giết mổ GS1:</span>
+                                    <span class="font-mono font-bold text-slate-900 text-xs">(414)8933475987656(254)0304</span>
                                 </div>
-                                <div class="flex flex-col space-y-1 border-t border-slate-50 pt-2">
-                                    <span class="text-slate-400 text-xs">Kiểm dịch vận chuyển</span>
-                                    <span class="font-semibold text-slate-700">Giấy kiểm dịch số KD-2404-124 do Chi cục Thú y TP.HCM phê duyệt thông quan hành trình.</span>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Mã lô/mẻ giết mổ GS1:</span>
+                                    <span class="font-mono font-bold text-blue-700 text-xs text-right break-all">(01)38933475987656(21)030401260425000012</span>
                                 </div>
-                                <div class="pt-1.5 border-t border-slate-50 flex justify-end">
-                                    <button onclick="openPartnerDocModal('kdvc')" class="inline-flex items-center space-x-1 text-xs bg-bafGreen-600 hover:bg-bafGreen-700 text-white px-2.5 py-1.5 rounded-lg font-semibold transition-all shadow-sm">
-                                        <i class="fa-solid fa-stamp"></i>
-                                        <span>Xem giấy kiểm dịch</span>
-                                    </button>
+                                <div class="flex justify-between">
+                                    <span class="text-slate-400">Vệ sinh thú y (VSTY):</span>
+                                    <span class="font-semibold text-slate-800 text-xs">Số VSTY-2604-099 (BSTY Hoàng Văn E duyệt)</span>
+                                </div>
+                                <div class="flex flex-col space-y-1">
+                                    <span class="text-slate-400">Pha lóc tảng:</span>
+                                    <p class="font-semibold text-slate-800 text-xs">Chia tảng ba rọi, cấp mã lô mẻ pha lóc GS1: <span class="font-mono text-blue-700 font-bold break-all">(01)38933475987656(21)040401260425000004</span> trong phòng lạnh 11.5°C.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Bước 6: TRANG TRẠI - XUẤT BÁN LÔ HEO (Đã bỏ chữ "Bước 6:") -->
+                    <!-- Bước 6: TRANG TRẠI (FARM) & XUẤT CHUỒNG (Tích hợp Trục thời gian con 4 tháng nuôi heo) -->
                     <div class="relative">
                         <span class="absolute -left-[23px] top-1.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-white">
                             <span class="h-2 w-2 rounded-full bg-green-500 ring-4 ring-green-100"></span>
                         </span>
                         
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-[10px] font-bold text-green-600 uppercase tracking-wide">Trang trại xuất trại (Gốc đầu)</span>
-                            <button id="step-6-btn" onclick="toggleTimeline('step-6-card', 'step-6-btn', 'step-6-chevron')" class="flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all">
-                                <span>Thu gọn</span>
-                                <i id="step-6-chevron" class="fa-solid fa-chevron-up transition-all text-[9px]"></i>
+                        <div class="flex items-center justify-between mb-1.5">
+                            <span class="text-[10px] font-bold text-green-600 uppercase tracking-wide">Trang trại & Xuất chuồng</span>
+                            <button id="step-6-btn" onclick="toggleTimeline('step-6-card', 'step-6-btn', 'step-6-chevron')" class="flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all">
+                                <span>Xem chi tiết</span>
+                                <i id="step-6-chevron" class="fa-solid fa-chevron-down transition-all text-[8px]"></i>
                             </button>
                         </div>
 
                         <!-- Card Chi tiết Bước 6 -->
-                        <div id="step-6-card" class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
-                            <div class="flex items-start space-x-3 mb-3">
-                                <div class="w-9 h-9 bg-green-500 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <i class="fa-solid fa-leaf text-sm"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-[13px] font-bold text-slate-800 leading-snug">Trại heo BaF Global S.L.P (TP.HCM)</h4>
-                                    <p class="text-[11px] text-slate-400 mt-0.5">Thời gian xuất: 24/04/2026 14:00 PM</p>
-                                </div>
-                            </div>
-                            <div class="bg-white border border-slate-100 rounded-lg p-3 space-y-2.5 text-[13px]">
-                                <div class="flex justify-between">
-                                    <span class="text-slate-400 text-xs">Mã Lô Xuất (GS1)</span>
-                                    <span class="font-mono font-bold text-slate-700">LXC-HCM-260424-03</span>
-                                </div>
-                                <div class="flex flex-col space-y-1 border-t border-slate-50 pt-2">
-                                    <span class="text-slate-400 text-xs">Tiêu chuẩn trang trại</span>
-                                    <span class="font-semibold text-slate-700">Biên bản xuất trại đạt chuẩn chăn nuôi an toàn sinh học GlobalG.A.P / VietGAP sạch bệnh.</span>
-                                </div>
-                                <div class="pt-1.5 border-t border-slate-50 flex justify-end">
-                                    <button onclick="openPartnerDocModal('bbxt')" class="inline-flex items-center space-x-1 text-xs bg-bafGreen-600 hover:bg-bafGreen-700 text-white px-2.5 py-1.5 rounded-lg font-semibold transition-all shadow-sm">
-                                        <i class="fa-solid fa-clipboard-check"></i>
-                                        <span>Xem biên bản xuất trại</span>
-                                    </button>
+                        <div class="bg-slate-50/70 border border-slate-100 rounded-xl p-3.5 transition-all duration-300">
+                            <p class="text-[11px] text-slate-400 font-mono mb-1"><i class="fa-regular fa-clock mr-1"></i>24/04/2026 14:00 PM</p>
+                            <p class="text-[13px] font-bold text-slate-800 leading-snug">Xuất chuồng lô heo giống từ Trại BaF TP.HCM.</p>
+                            
+                            <!-- Phần mở rộng: Trục Nhật ký con chăn nuôi 4 tháng ngược dòng -->
+                            <div id="step-6-card" class="hidden mt-4 pt-4 border-t border-slate-200">
+                                <h5 class="text-xs font-bold text-slate-900 mb-3 uppercase tracking-wider flex items-center">
+                                    <i class="fa-solid fa-history mr-1.5 text-green-600"></i>Nhật ký chăn nuôi
+                                </h5>
+                                
+                                <div class="relative pl-4 space-y-4 text-xs border-l border-slate-200 ml-1.5">
+                                    
+                                    <!-- Điểm 1: Thời điểm xuất chuồng -->
+                                    <div class="relative">
+                                        <span class="absolute -left-[20px] top-1 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-white">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-green-600"></span>
+                                        </span>
+                                        <p class="font-bold text-slate-800">Thời điểm Xuất chuồng (24/04/2026)</p>
+                                        <div class="mt-1 text-slate-600 space-y-1 bg-white p-2 rounded border border-slate-100">
+                                            <p>• Mã cơ sở chăn nuôi GS1: <strong class="font-mono text-slate-950 text-xs">(414)8933472000013(254)0104</strong></p>
+                                            <p>• Mã lô xuất bán GS1: <strong class="font-mono text-blue-700 text-xs break-all">(00)08933472000013(21)0104260424000003</strong></p>
+                                            <p>• Trọng lượng trung bình xuất: 110 kg</p>
+                                            <p>• Giấy kiểm dịch động vật: <strong class="font-mono text-slate-950">KD-2404-124</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Điểm 2: Tuần 16 -->
+                                    <div class="relative">
+                                        <span class="absolute -left-[20px] top-1 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-white">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+                                        </span>
+                                        <p class="font-bold text-slate-800">Tuần 16 (17/04/2026)</p>
+                                        <p class="text-slate-600 mt-0.5">Sát trùng chuồng trại: Phun xịt khử khuẩn Benkocid toàn diện. Thực hiện cách ly nghiêm ngặt chuẩn bị xuất bán thương mại.</p>
+                                    </div>
+
+                                    <!-- Điểm 3: Tuần 12 -->
+                                    <div class="relative">
+                                        <span class="absolute -left-[20px] top-1 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-white">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                                        </span>
+                                        <p class="font-bold text-slate-800">Tuần 12 (20/03/2026)</p>
+                                        <div class="mt-1 text-slate-600 space-y-0.5 bg-amber-50/50 p-2 rounded border border-amber-100">
+                                            <p class="font-semibold text-amber-900"><i class="fa-solid fa-syringe mr-1"></i>Nhật ký Thú y:</p>
+                                            <p>Tiêm phòng Vaccine dịch tả heo châu Phi (ASF) (Mã lô vaccine: <strong class="font-mono">VAC-ASF-02</strong>, BSTY Nguyễn Văn A trực tiếp thực hiện).</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Điểm 4: Tuần 1 - Tuần 15 -->
+                                    <div class="relative">
+                                        <span class="absolute -left-[20px] top-1 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-white">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
+                                        </span>
+                                        <p class="font-bold text-slate-800">Tuần 1 - Tuần 15 (Chăm sóc nuôi dưỡng)</p>
+                                        <div class="mt-1 text-slate-600 space-y-0.5 bg-green-50/50 p-2 rounded border border-green-100">
+                                            <p class="font-semibold text-green-900"><i class="fa-solid fa-wheat-awn mr-1"></i>Nhật ký Dinh dưỡng:</p>
+                                            <p>Sử dụng 100% Cám chay BaF (Độc quyền không chứa đạm động vật, không chất tạo nạc, không chất tăng trọng) từ nhà máy cám BaF Tây Ninh (Lô cám: <strong class="font-mono">FEED-VEG-992</strong>).</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Điểm 5: Thời điểm nhập đàn -->
+                                    <div class="relative">
+                                        <span class="absolute -left-[20px] top-1 flex h-2.5 w-2.5 items-center justify-center rounded-full bg-white">
+                                            <span class="h-1.5 w-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                                        </span>
+                                        <p class="font-bold text-slate-800">Thời điểm Nhập đàn (24/12/2025)</p>
+                                        <div class="mt-1 text-slate-600 space-y-1 bg-white p-2 rounded border border-slate-100">
+                                            <p>• Nghiệp vụ: Nhập đàn 200 heo con GP từ trại cụ kỵ.</p>
+                                            <p>• Mã Đàn Lợn con sinh ra GS1: <strong class="font-mono text-blue-700 text-xs break-all">(01)18933472000013(21)010401251224009921</strong> (Neo chặt vào định danh cá thể <strong class="font-mono">BAF-PIG-9921</strong>).</p>
+                                            <p>• Trọng lượng ban đầu: 15 kg/con.</p>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -476,8 +510,7 @@
 
         <!-- Footer mới chuẩn xác theo ảnh của anh -->
         <footer class="text-center text-xs mt-6 pb-8 space-y-2">
-            <p class="text-[#7f8e9d] font-medium tracking-wide">Vận hành bởi SAP S/4HANA Cloud</p>
-            <p class="text-[#9cb2c6] font-bold text-[11px] tracking-wider uppercase">CƠ SỞ DỮ LIỆU QUỐC GIA VỀ CHĂN NUÔI © 2026</p>
+            <p class="text-[#9cb2c6] font-bold text-[11px] tracking-wider uppercase">Công ty CP Nông nghiệp BAF Việt Nam © 2026</p>
         </footer>
 
     </div>
@@ -536,42 +569,6 @@
         </div>
     </div>
 
-    <!-- Modal Popup DÀNH CHO CÁC BIÊN BẢN ĐỐI TÁC B2B (Động hóa bằng JavaScript) -->
-    <div id="partner-doc-modal" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-2xl max-w-sm w-full border-t-8 border-bafGreen-600 p-5 shadow-2xl relative overflow-hidden transition-transform duration-300 scale-95" id="partner-modal-container">
-            <!-- Header biên bản -->
-            <div class="pb-3 border-b border-slate-100 relative">
-                <div class="flex justify-between items-start">
-                    <span class="text-[9px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Hệ thống SAP ERP</span>
-                    <span class="text-xs font-bold text-slate-400">B2B Verified</span>
-                </div>
-                <h4 id="partner-doc-title" class="text-sm font-extrabold text-slate-900 mt-3 uppercase tracking-wide leading-snug">
-                    Tên Biên Bản
-                </h4>
-                <p id="partner-doc-subtitle" class="text-[10px] text-slate-400 font-mono mt-0.5">Mã số số hóa: BAF-xxxx-xxxx</p>
-            </div>
-
-            <!-- Nội dung thay đổi động -->
-            <div id="partner-doc-body" class="py-4 space-y-3.5 text-xs text-slate-700">
-                <!-- Sẽ được fill bằng JavaScript -->
-            </div>
-
-            <!-- Dấu mộc số của BAF ERP -->
-            <div class="absolute right-4 bottom-14 w-20 h-20 border-2 border-dashed border-bafGreen-500/30 rounded-full flex items-center justify-center rotate-12 pointer-events-none">
-                <div class="w-16 h-16 border border-bafGreen-500/20 rounded-full flex items-center justify-center text-center p-1">
-                    <span class="text-[7px] font-bold text-bafGreen-600/50 leading-tight">BAF MEAT SYSTEM VERIFIED</span>
-                </div>
-            </div>
-
-            <!-- Nút đóng -->
-            <div class="pt-3 border-t border-slate-100 flex justify-end space-x-2">
-                <button onclick="closePartnerDocModal()" class="bg-slate-800 hover:bg-slate-900 text-white font-semibold text-xs px-4 py-2 rounded-lg transition-all active:scale-95 shadow-md">
-                    Đóng biên bản
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Script điều khiển đóng mở trạng thái linh hoạt -->
     <script>
         // Hàm Đóng/Mở các Section lớn (Định danh, Tiêu chuẩn)
@@ -594,25 +591,25 @@
             }
         }
 
-        // Hàm Đóng/Mở các bước nhỏ trong Nhật ký chuỗi cung ứng
+        // Hàm Đóng/Mở các bước nhỏ trong Nhật ký chuỗi cung ứng (Inline Accordion mượt mà)
         function toggleTimeline(cardId, btnId, chevronId) {
             const card = document.getElementById(cardId);
             const btn = document.getElementById(btnId);
             const btnText = btn.querySelector('span');
             const chevron = document.getElementById(chevronId);
 
-            if (card.classList.contains('hidden') || card.style.display === 'none') {
+            if (card.classList.contains('hidden')) {
                 card.classList.remove('hidden');
-                card.style.display = 'block';
                 btnText.innerText = 'Thu gọn';
-                chevron.style.transform = "rotate(0deg)";
-                btn.className = "flex items-center space-x-1 text-slate-500 bg-slate-50 px-2 py-1 rounded-md text-[11px] font-medium border border-slate-100 transition-all";
+                chevron.style.transform = "rotate(180deg)";
+                // Chuyển nút về màu xám nền nã
+                btn.className = "flex items-center space-x-1 text-slate-500 bg-slate-100 px-2 py-0.5 rounded-md text-[10px] font-semibold transition-all";
             } else {
                 card.classList.add('hidden');
-                card.style.display = 'none';
-                btnText.innerText = 'Mở rộng';
-                chevron.style.transform = "rotate(180deg)";
-                btn.className = "flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2.5 py-1.5 rounded-md text-[11px] font-semibold shadow-sm transition-all border-none";
+                btnText.innerText = 'Xem chi tiết';
+                chevron.style.transform = "rotate(0deg)";
+                // Chuyển nút về màu xanh nổi bật kích thích click
+                btn.className = "flex items-center space-x-1 text-white bg-bafGreen-600 hover:bg-bafGreen-700 px-2 py-0.5 rounded-md text-[10px] font-semibold shadow-sm transition-all";
             }
         }
 
@@ -631,167 +628,6 @@
         function closeVietGAPModal() {
             const modal = document.getElementById('vietgap-modal');
             const container = document.getElementById('modal-container');
-            modal.classList.add('opacity-0');
-            container.classList.remove('scale-100');
-            container.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Quản lý Modal Tài liệu động của B2B Partner
-        function openPartnerDocModal(docType) {
-            const modal = document.getElementById('partner-doc-modal');
-            const container = document.getElementById('partner-modal-container');
-            const titleEl = document.getElementById('partner-doc-title');
-            const subtitleEl = document.getElementById('partner-doc-subtitle');
-            const bodyEl = document.getElementById('partner-doc-body');
-
-            let title = "";
-            let subtitle = "";
-            let bodyContent = "";
-
-            if (docType === 'bbbg') {
-                title = "Biên Bản Bàn Giao Nguyên Liệu Thịt Xẻ";
-                subtitle = "Số: BBBG-2504-BAF/HVC";
-                bodyContent = `
-                    <div class="space-y-3">
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Bên Giao (Nhà cung cấp):</span>
-                            <span class="font-bold text-slate-800 text-right">Cty MTV Hương Vĩnh Cửu</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Bên Nhận (Chế biến):</span>
-                            <span class="font-bold text-slate-800 text-right">Nhà máy chế biến BaF Đồng Nai</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Lô thịt heo xẻ (GS1):</span>
-                            <span class="font-mono font-bold text-blue-600">MAT-GM12-004</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Khối lượng tịnh bàn giao:</span>
-                            <span class="font-bold text-slate-800">4,150 Kg</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Trạng thái cảm quan:</span>
-                            <span class="font-bold text-emerald-600"><i class="fa-solid fa-circle-check mr-1"></i>Hồng tươi, đàn hồi tốt</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Nhiệt độ kiểm tra:</span>
-                            <span class="font-bold text-blue-600">2.8°C (Đạt chuẩn chuỗi lạnh)</span>
-                        </div>
-                    </div>
-                `;
-            } else if (docType === 'vsty') {
-                title = "Giấy Chứng Nhận Vệ Sinh Thú Y Thân Thịt";
-                subtitle = "Số: VSTY-2604-099";
-                bodyContent = `
-                    <div class="space-y-3">
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Cơ quan thẩm quyền cấp:</span>
-                            <span class="font-bold text-slate-800 text-right text-xs">Trạm Thú Y Vĩnh Cửu (Đồng Nai)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Mã cơ sở giết mổ:</span>
-                            <span class="font-bold text-slate-800 text-right">HVC-SL-012</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Mã Lô Giết Mổ (GS1):</span>
-                            <span class="font-mono font-bold text-blue-600">GM-260425-012</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Kết quả khám lâm sàng:</span>
-                            <span class="font-bold text-emerald-600"><i class="fa-solid fa-circle-check mr-1"></i>100% Khỏe mạnh trước giết mổ</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Huyết thanh học & dịch tễ:</span>
-                            <span class="font-bold text-emerald-600">Âm tính dịch tả heo châu Phi</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Trạng thái kiểm duyệt:</span>
-                            <span class="font-bold text-red-600"><i class="fa-solid fa-stamp mr-1"></i>ĐÃ ĐÓNG DẤU CHUẨN THÚ Y</span>
-                        </div>
-                    </div>
-                `;
-            } else if (docType === 'kdvc') {
-                title = "Giấy Kiểm Dịch Vận Chuyển Động Vật";
-                subtitle = "Số: KD-2404-124 / Chi cục Thú y";
-                bodyContent = `
-                    <div class="space-y-3">
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Cơ quan phê duyệt hành trình:</span>
-                            <span class="font-bold text-slate-800 text-right">Chi cục Thú y TP.HCM</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Đơn vị vận chuyển:</span>
-                            <span class="font-bold text-slate-800">BaF Logistics</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Biển kiểm soát phương tiện:</span>
-                            <span class="font-mono font-bold text-blue-600">51C-987.65 (Xe chuyên dụng)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Số lượng heo cấp phép:</span>
-                            <span class="font-bold text-slate-800">80 Con (Trọng lượng TB 115kg)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Nơi đi (Trang trại gốc):</span>
-                            <span class="font-bold text-slate-800 text-right">Trại heo BaF Tây Ninh</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Nơi đến (Địa điểm mổ):</span>
-                            <span class="font-bold text-slate-800 text-right">Lò mổ Hương Vĩnh Cửu</span>
-                        </div>
-                    </div>
-                `;
-            } else if (docType === 'bbxt') {
-                title = "Biên Bản Xuất Trại An Toàn Sinh Học";
-                subtitle = "Số: BBXT-LXC-HCM-260424-03";
-                bodyContent = `
-                    <div class="space-y-3">
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Đơn vị xuất chuồng:</span>
-                            <span class="font-bold text-slate-800 text-right">Trại BaF Global S.L.P</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Mã Lô Xuất Chuồng (GS1):</span>
-                            <span class="font-mono font-bold text-blue-600">LXC-HCM-260424-03</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Chế độ dinh dưỡng:</span>
-                            <span class="font-bold text-amber-600"><i class="fa-solid fa-wheat-awn mr-1"></i>Thức ăn chay (Không bột cá)</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Tiêm phòng vắc-xin dịch tả:</span>
-                            <span class="font-bold text-emerald-600"><i class="fa-solid fa-syringe mr-1"></i>Đã hoàn thành 100%</span>
-                        </div>
-                        <div class="flex justify-between border-b border-slate-50 pb-1.5">
-                            <span class="text-slate-400">Tiêu chuẩn an toàn sinh học:</span>
-                            <span class="font-bold text-emerald-600">GlobalG.A.P chăn nuôi sạch</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Trạng thái xuất chuồng:</span>
-                            <span class="font-bold text-slate-800">Đủ điều kiện thương mại hóa</span>
-                        </div>
-                    </div>
-                `;
-            }
-
-            titleEl.innerText = title;
-            subtitleEl.innerText = subtitle;
-            bodyEl.innerHTML = bodyContent;
-
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                container.classList.remove('scale-95');
-                container.classList.add('scale-100');
-            }, 50);
-        }
-
-        function closePartnerDocModal() {
-            const modal = document.getElementById('partner-doc-modal');
-            const container = document.getElementById('partner-modal-container');
             modal.classList.add('opacity-0');
             container.classList.remove('scale-100');
             container.classList.add('scale-95');
